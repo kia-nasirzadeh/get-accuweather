@@ -13,6 +13,3 @@ function setUrls(argv) {
     messageManager.show('url txt file has been successfully set', 'success');
 }
 module.exports = { setUrls };
-
-
- 
