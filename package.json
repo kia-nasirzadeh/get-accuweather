@@ -3,8 +3,8 @@
     "get-accuweather": "./bin/index.js"
   },
   "name": "get-accuweather",
-  "version": "1.0.1",
-  "repository": {
+  "version": "1.0.2",
+  "repository": { 
     "type": "git",
     "url": "https://github.com/kia-nasirzadeh/get-accuweather.git"
   },

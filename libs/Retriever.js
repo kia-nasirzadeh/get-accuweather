@@ -17,7 +17,9 @@ module.exports = class Retriever {
     constructor() {}
     async init(callback) {
         this.browser = await puppeteer.launch({
-            headless: true
+            "headless": true,
+            "args": ["--fast-start", "--disable-extensions", "--no-sandbox"],
+            "ignoreHTTPSErrors": true
         });
         callback(this);
     }
@@ -36,6 +38,7 @@ module.exports = class Retriever {
     async buildMonthLinksObj(url) {
         let browser = this.browser;
         let page = await browser.newPage();
+        await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36');
         let monthLinks = [];
 
         await page.goto(url, {
@@ -65,6 +68,7 @@ module.exports = class Retriever {
         }, "").start();
 
         const page = await browser.newPage();
+        await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36');
         let t1 = Date.now();
         await page.goto(dayLink, {
             waitUntil: 'load',
