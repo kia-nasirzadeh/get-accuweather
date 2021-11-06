@@ -6,7 +6,7 @@ const appProperties = require('./../../appProperties.js');
 function setUrls(argv) {
     let urlsTxtFilePath = argv[3];
     if (urlsTxtFilePath === undefined) {
-        messageManager.show('please set a url\nneed help? use kia-sperloos help', 'error')
+        messageManager.show('please set a url\nneed help? use get-accuweather help', 'error')
         return false;
     }
     appProperties.setProp('urlsPath', path.resolve(urlsTxtFilePath));

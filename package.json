@@ -1,12 +1,12 @@
 {
   "bin": {
-    "kia-sperloos": "./bin/index.js"
+    "get-accuweather": "./bin/index.js"
   },
   "name": "get-accuweather",
   "version": "1.0.0",
   "repository": {
-      "type": "git",
-      "url": "https://github.com/kia-nasirzadeh/get-accuweather.git"
+    "type": "git",
+    "url": "https://github.com/kia-nasirzadeh/get-accuweather.git"
   },
   "description": "",
   "main": "bin/index.js",

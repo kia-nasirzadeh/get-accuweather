@@ -7,7 +7,7 @@ const retriever = new Retriever();
 function getUrls (argv) {
     let urlsPath = appProperties.getProp('urlsPath');
     if (urlsPath == false || urlsPath == undefined || urlsPath == '' || urlsPath == " ") {
-        messageManager.show('please first set a txt file\nneed help? use kia-sperloos help', 'error');
+        messageManager.show('please first set a txt file\nneed help? use get-accuweather help', 'error');
         return;
     }
     if (argv[3] == 'days' && argv[4] == 'shell') {
@@ -20,7 +20,7 @@ function getUrls (argv) {
         })
     } else if (argv[3] == 'days' && argv[4] == 'json') {
         if (argv[5] == undefined || argv[5] == '' || argv[5] == ' ') {
-            messageManager.show('please set a output file\nneed help? use kia-sperloos help', 'error');
+            messageManager.show('please set a output file\nneed help? use get-accuweather help', 'error');
             return;
         }
         retriever.init((retriever) => {
@@ -28,7 +28,7 @@ function getUrls (argv) {
         })
     } else if (argv[3] == 'months' && argv[4] == 'json') {
         if (argv[5] == undefined || argv[5] == '' || argv[5] == ' ') {
-            messageManager.show('please set a output file\nneed help? use kia-sperloos help', 'error');
+            messageManager.show('please set a output file\nneed help? use get-accuweather help', 'error');
             return;
         }
         retriever.init((retriever) => {

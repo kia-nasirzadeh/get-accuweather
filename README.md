@@ -4,15 +4,29 @@ truth be told, actually this was an employment test project I coded for a compan
 
 this simple little cli tool helps you to get climate properties of a month(s)/day(s) in your desired file sourced on accuweather.com
 
-# usage
+# install
 
 [you can watch a little tutorial about this here]()
 
 installing with npm:
 
 ```
-npm i kia-sperloos
+npm i -g get-accuweather
 ```
+
+installing manually:
+
+```
+# download whole project
+cd PROJECT-PATH	
+npm i -g .
+```
+
+#### any advice for a common error?
+
+yes, you may encounter with `Failed to set up Chromium <some-chromium-version>` , that's just because of your connection, try to change your IP & DNS and it will be ok :)
+
+# usage
 
 for instance assume you want to retrieve the property of a day in a file called `output.txt`:
 
@@ -22,8 +36,8 @@ New-Item output.txt
 New-Item input.txt
 $source = "https://www.accuweather.com/en/gb/london/ec4a-2/daily-weather-forecast/328328?day=1"
 Set-Content .\input.txt $source
-kia-sperloos set input.json
-kia-sperloos get days json .\output.txt
+get-accuweather set input.json
+get-accuweather get days json .\output.txt
 ```
 
 
@@ -39,42 +53,42 @@ kia-sperloos get days json .\output.txt
 check if program installed property:
 
 ```
-kia-sperloos -v
+get-accuweather -v
 ```
 
 get help how to use this tool, it will open the same markdown file you are reading but in `.pdf` format:
 
 ```
-kia-sperloos help
+get-accuweather help
 ```
 
 set a file for output (it can be `.txt` or `.json` or whatever you want:
 
 ```
-kia-sperloos set PATH-OF-URLs-FILE
+get-accuweather set PATH-OF-URLs-FILE
 ```
 
 get day(s) in the shell:
 
 ```
-kia-sperloos get days shell
+get-accuweather get days shell
 ```
 
 get day(s) in an output file:
 
 ```
-kia-sperloos get days json .\output.json
+get-accuweather get days json .\output.json
 ```
 
 get month(s) in the shell:
 
 ```
-kia-sperloos get months shell
+get-accuweather get months shell
 ```
 
 get month(s) in an output file:
 
 ```
-kia-sperloos get months json .\output.json
+get-accuweather get months json .\output.json
 ```
 

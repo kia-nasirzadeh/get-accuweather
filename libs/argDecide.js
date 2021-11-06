@@ -20,7 +20,7 @@ function decide(argv) {
             introText.show();
             break;
         default:
-            messageManager.show('we can\'t recognize this cmdlet \nneed help? use "kia-sperloos help"', 'error')
+            messageManager.show('we can\'t recognize this cmdlet \nneed help? use "get-accuweather help"', 'error')
             break;
     }
 }

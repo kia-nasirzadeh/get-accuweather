@@ -19,14 +19,14 @@ function buildIntroText() {
         versionTitle: chalk.black.bgGreen(' version:       '),
         version: chalk.white('1.0.0 - beta'),
         instructionTitle: chalk.white.bgBlack("                                        INSTRUCTION                                        "),
-        codekiaSperloos: chalk.white.inverse(' kia-sperloos                                     '),
-        codekiaSperloosv: chalk.white.inverse(' kia-sperloos -v                                  '),
-        codekiaSperloosHelp: chalk.white.inverse(' kia-sperloos help                                '),
-        codekiaSperloosSetUrls: chalk.white.inverse(' kia-sperloos set PATH-OF-URLs-FILE               '),
-        codekiaSperloosGetDaysShell: chalk.white.inverse(' kia-sperloos get days shell                      '),
-        codekiaSperloosGetMonthShell: chalk.white.inverse(' kia-sperloos get months shell                    '),
-        codekiaSperloosGetDaysJson: chalk.white.inverse(' kia-sperloos get days json PATH-OF-RESULTS-DIR   '),
-        codekiaSperloosGetShellJson: chalk.white.inverse(' kia-sperloos get months json PATH-OF-RESULTS-DIR ')
+        codekiaSperloos: chalk.white.inverse(' get-accuweather                                     '),
+        codekiaSperloosv: chalk.white.inverse(' get-accuweather -v                                  '),
+        codekiaSperloosHelp: chalk.white.inverse(' get-accuweather help                                '),
+        codekiaSperloosSetUrls: chalk.white.inverse(' get-accuweather set PATH-OF-URLs-FILE               '),
+        codekiaSperloosGetDaysShell: chalk.white.inverse(' get-accuweather get days shell                      '),
+        codekiaSperloosGetMonthShell: chalk.white.inverse(' get-accuweather get months shell                    '),
+        codekiaSperloosGetDaysJson: chalk.white.inverse(' get-accuweather get days json PATH-OF-RESULTS-DIR   '),
+        codekiaSperloosGetShellJson: chalk.white.inverse(' get-accuweather get months json PATH-OF-RESULTS-DIR ')
     }
     
     let instruction = chalk.white(`

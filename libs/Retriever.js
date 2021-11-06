@@ -17,7 +17,7 @@ module.exports = class Retriever {
     constructor() {}
     async init(callback) {
         this.browser = await puppeteer.launch({
-            headless: false
+            headless: true
         });
         callback(this);
     }
