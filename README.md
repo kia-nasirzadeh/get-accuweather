@@ -20,6 +20,7 @@ yes,
 2- in input file be careful about BOM char and final char and \r\n or \n in other words **last char must not be a new line of a BOM or ...**
 
 3- this problem is in ToDo but be careful, if you want to use this on a linux os line breaks may cause problems...
+
 ![installing get-accuweather](./assets/installing.gif "installing get-accuweather")
 
 # usage
