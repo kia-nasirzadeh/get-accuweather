@@ -6,8 +6,6 @@ this simple little cli tool helps you to get climate properties of a month(s)/da
 
 # install
 
-[you can watch a little tutorial about this here]()
-
 installing with npm:
 
 ```
@@ -21,6 +19,8 @@ installing manually:
 cd PROJECT-PATH	
 npm i -g .
 ```
+
+![installing get-accuweather](./assets/installing.gif "installing get-accuweather")
 
 #### any advice for a common error?
 
