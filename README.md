@@ -20,11 +20,11 @@ cd PROJECT-PATH
 npm i -g .
 ```
 
-![installing get-accuweather](./assets/installing.gif "installing get-accuweather")
-
 #### any advice for a common error?
 
 yes, you may encounter with `Failed to set up Chromium <some-chromium-version>` , that's just because of your connection, try to change your IP & DNS and it will be ok :)
+
+![installing get-accuweather](./assets/installing.gif "installing get-accuweather")
 
 # usage
 
