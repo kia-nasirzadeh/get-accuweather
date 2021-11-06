@@ -16,11 +16,7 @@ const Report = require('./Report.js');
 module.exports = class Retriever {
     constructor() {}
     async init(callback) {
-        this.browser = await puppeteer.launch({
-            "headless": true,
-            "args": ["--fast-start", "--disable-extensions", "--no-sandbox"],
-            "ignoreHTTPSErrors": true
-        });
+        this.browser = await puppeteer.launch();
         callback(this);
     }
     getUrlFilePath() {
@@ -31,20 +27,23 @@ module.exports = class Retriever {
         let fileContents = fs.readFileSync(this.getUrlFilePath(), {
             encoding: 'utf8'
         });
-        let fileContentsArray = fileContents.split('\n');
-        // #TODO: check os before spliting cause sometimes we should split them by \r\n :
+        let fileContentsArray = fileContents.split('\r\n');
+        // #TODO: check os before spliting cause sometimes we should split them by \n linux :
         return fileContentsArray;
     }
     async buildMonthLinksObj(url) {
         let browser = this.browser;
         let page = await browser.newPage();
-        await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36');
+        await page.setUserAgent('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36');
+        // page.setUserAgent(userAgent);
         let monthLinks = [];
 
         await page.goto(url, {
             waitUntil: 'load',
             timeout: 0
         });
+        const userAgent = await page.evaluate(() => navigator.userAgent );
+
         const html = await page.content();
         const $ = cheerio.load(html);
         $('.monthly-daypanel').each((i, el) => {
@@ -68,12 +67,15 @@ module.exports = class Retriever {
         }, "").start();
 
         const page = await browser.newPage();
-        await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36');
+        await page.setUserAgent('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36');
+        // page.setUserAgent(userAgent);
         let t1 = Date.now();
         await page.goto(dayLink, {
             waitUntil: 'load',
             timeout: 0
         });
+        const userAgent = await page.evaluate(() => navigator.userAgent );
+
         let diffTime = Date.now() - t1;
         load.stop();
         console.log(`day retrieved in ${diffTime} milliseconds`);

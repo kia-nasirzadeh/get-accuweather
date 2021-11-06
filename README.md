@@ -12,18 +12,12 @@ installing with npm:
 npm i -g get-accuweather
 ```
 
-installing manually:
-
-```
-# download whole project
-cd PROJECT-PATH	
-npm i -g .
-```
-
 #### any advice for a common error?
 
-yes, you may encounter with `Failed to set up Chromium <some-chromium-version>` , that's just because of your connection, try to change your IP & DNS and it will be ok :)
-
+yes, 
+1- you may encounter with `Failed to set up Chromium <some-chromium-version>` , that's just because of your connection, try to change your IP & DNS and it will be ok :)
+2- in input file be careful about BOM char and final char and \r\n or \n in other words **last char must not be a new line of a BOM or ...**
+3- this problem is in ToDo but be careful, if you want to use this on a linux os line breaks may cause problems...
 ![installing get-accuweather](./assets/installing.gif "installing get-accuweather")
 
 # usage
@@ -47,6 +41,8 @@ get-accuweather get days json .\output.txt
 **important Notice 2:** use a full screen or maximized shell, otherwise you maybe encounter UI bugs
 
 **important Notice 3:** accuweather.com has no data for passed days, so use this tool for coming days and months
+
+![get-accuweather](./assets/get.gif "get-accuweather")
 
 # methods
 

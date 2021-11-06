@@ -17,7 +17,7 @@ function buildIntroText() {
         authorTitle: chalk.black.bgGreen(' author:        '),
         authorName: chalk.white('https://github.com/kia-nasirzadeh/get-accuweather'),
         versionTitle: chalk.black.bgGreen(' version:       '),
-        version: chalk.white('1.0.0 - beta'),
+        version: chalk.white('1.0.4 - beta'),
         instructionTitle: chalk.white.bgBlack("                                        INSTRUCTION                                        "),
         codekiaSperloos: chalk.white.inverse(' get-accuweather                                     '),
         codekiaSperloosv: chalk.white.inverse(' get-accuweather -v                                  '),
