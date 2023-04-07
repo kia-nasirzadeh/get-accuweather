@@ -1,6 +1,4 @@
-appreciate me with giving a star to me ☻. (it's at the top-right of this page)
-
-truth be told, actually this was an employment test project I coded for a company called *"sperloos"* but it worth to be on my github since it may help someone else
+truth be told, this was an employment test project I coded for a company called *"sperloos"* but it worth to be on my github since it may help someone else
 
 this simple little cli tool helps you to get climate properties of a month(s)/day(s) in your desired file sourced on accuweather.com
 
